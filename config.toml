@@ -1,1 +1,18 @@
+baseURL = "https://br-brasil.github.io/LeituraBR/"
+languageCode = "pt-br"
+title = "LeituraBR"
+theme = ""
+paginate = 10
+
+[params]
+  description = "Landing page para venda de livros no Brasil"
+  author = "LeituraBR"
+
+[outputs]
+  home = ["HTML"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
