@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Site.Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ .Site.Params.description }}">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>LeituraBR</h1>
+    <p>Conhecimento que transforma. Escolha seu próximo livro.</p>
+    <a href="#livros" class="btn">Ver livros</a>
+  </section>
+
+  <!-- LIVROS -->
+  <section id="livros" class="livros">
+    <h2>Livros disponíveis</h2>
+
+    <div class="livros-grid">
+      {{ range .Site.Data.livros }}
+        <div class="livro-card">
+          <img src="{{ .imagem }}" alt="{{ .titulo }}">
+          <h3>{{ .titulo }}</h3>
+          <p>{{ .descricao }}</p>
+          <a href="{{ .link }}" class="btn" target="_blank">Comprar</a>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta">
+    <h2>Comece agora</h2>
+    <p>Invista em leitura, invista em você.</p>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>© {{ now.Year }} LeituraBR</p>
+  </footer>
+
+</body>
+</html>
 
