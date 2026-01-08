@@ -1,1 +1,62 @@
+/* HEADER FIXO */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  z-index: 1000;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+  max-height: 60px;
+  width: auto;
+}
+
+/* MENU */
+.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  color: #d4af37; /* dourado */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.main-nav a:hover {
+  opacity: 0.8;
+}
+
+/* COMPENSA O HEADER FIXO */
+body {
+  padding-top: 90px;
+}
+
+/* MOBILE SEM MENU SANDUÍCHE */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-nav {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
